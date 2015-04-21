@@ -102,4 +102,9 @@ License
 
 MIT
 
+Always-Encrypted Token? Try Salt
+--------------------------------
+
+http://github.com/ibmendoza/salt
+
 
