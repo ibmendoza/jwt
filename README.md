@@ -2,6 +2,7 @@ A simple JWT library using HMAC with optional NaCl encryption of claims
 
 Example:
 
+```go
 package main
 
 import (
@@ -57,3 +58,16 @@ func main() {
 
 	fmt.Println(jwt.Verify(token, "secret", naclKey)) //expired
 }
+```
+
+Author
+-----
+
+Isagani Mendoza (http://itjumpstart.wordpress.com) [(http://itjumpstart.wordpress.com)]
+
+License
+-------
+
+MIT
+
+
