@@ -15,11 +15,11 @@ func Sign(alg string, claims map[string]interface{}, secret, naclKey string) (st
 
 Rules: 
 
-alg can be HS256, HS384 or HS512 only (none is an error)
-claims is a map or the equivalent of object in JavaScript
-secret is used in HMAC signing
-naclKey is used if you want to encrypt the claims (otherwise set it to "")
-call GenerateKey() to generate naclKey
+- alg can be HS256, HS384 or HS512 only (none is an error)
+- claims is a map or the equivalent of object in JavaScript
+- secret is used in HMAC signing
+- naclKey is used if you want to encrypt the claims (otherwise set it to "")
+- call GenerateKey() to generate naclKey
 
 Verify a Token
 --------------
