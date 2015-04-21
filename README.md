@@ -1,4 +1,4 @@
-A simple JWT library using HMAC with optional NaCl encryption of claims meant to address critical vulnerabilities posted at https://auth0.com/blog/2014/01/27/ten-things-you-should-know-about-tokens-and-cookies
+A simple JWT library using HMAC with optional NaCl encryption of claims meant to address critical vulnerabilities posted at https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries
 
 Algorithms: HS256, HS384 and HS512 only
 
