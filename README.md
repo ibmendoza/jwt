@@ -1,6 +1,38 @@
-A simple JWT library using HMAC with optional NaCl encryption of claims
+A simple JWT library using HMAC with optional NaCl encryption of claims meant to address critical vulnerabilities posted at https://auth0.com/blog/2014/01/27/ten-things-you-should-know-about-tokens-and-cookies
 
-Example:
+Algorithms: HS256, HS384 and HS512 only
+
+Claims: set exp using the convenience function ExpiresInSeconds, ExpiresInMinutes or ExpiresInHours
+
+Optional encryption of claims: call GenerateKey()
+
+Generate a Token
+----------------
+
+```go
+func Sign(alg string, claims map[string]interface{}, secret, naclKey string) (string, error)
+```
+
+Rules: 
+
+alg can be HS256, HS384 or HS512 only (none is an error)
+claims is a map or the equivalent of object in JavaScript
+secret is used in HMAC signing
+naclKey is used if you want to encrypt the claims (otherwise set it to "")
+call GenerateKey() to generate naclKey
+
+Verify a Token
+--------------
+
+```go
+func Verify(token, secret, naclKey string) (map[string]interface{}, error)
+```
+
+Returns the corresponding claims as map[string]interface{} if token is valid
+
+
+Example
+-------
 
 ```go
 package main
@@ -63,7 +95,7 @@ func main() {
 Author
 -----
 
-Isagani Mendoza (http://itjumpstart.wordpress.com) [(http://itjumpstart.wordpress.com)]
+Isagani Mendoza (http://itjumpstart.wordpress.com)
 
 License
 -------
